@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE hibernate-configuration PUBLIC
+	"-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+	"http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+	<session-factory>
+		<!-- In below line mention jdbc driver -->
+		<property name="connection.driver_class">com.mysql.cj.jdbc.Driver</property>
+
+		<!-- In below line mention jdbc url -->
+		<property name="connection.url">jdbc:mysql://localhost/hibernate</property>
+
+		<!-- In below line mention mysql username -->
+		<property name="connection.username">root</property>
+
+		<!-- In below line mention mysql password -->
+		<property name="connection.password">Swapnil@123</property>
+
+		<!-- the use of dilect is it act as a bridge between jdbc types and sql 
+			types -->
+		<property name="dialect">org.hibernate.dialect.MySQL8Dialect</property>
+
+		<!-- It interact with database schema -->
+		<property name="hbm2ddl.auto">update</property>
+		<property name="show_sql">true</property>
+
+		<!-- It is use to map the class -->
+		<mapping class="com.Hibernate.Hibernate_1.StudentPersistent" />
+	</session-factory>
+
+</hibernate-configuration>
